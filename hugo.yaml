@@ -1,4 +1,4 @@
-baseURL: https://agoodmu.github.io/
+baseURL: https://example.docsy.dev
 title: Goldydocs
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
@@ -40,7 +40,7 @@ permalinks:
 imaging:
   resampleFilter: CatmullRom
   quality: 75
-  anchor: Smart
+  anchor: smart
 
 # Language configuration
 languages:
@@ -123,10 +123,10 @@ params:
   url_latest_version: https://example.com
 
   # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-  github_repo: https://github.com/agoodmu/agoodmu.github.io
+  github_repo: https://github.com/google/docsy-example
 
   # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-  github_project_repo: https://github.com/agoodmu/agoodmu.github.io
+  github_project_repo: https://github.com/google/docsy
 
   # Specify a value here if your content directory is not in your repo's root directory
   # github_subdir: ""
