@@ -1,5 +1,5 @@
 baseURL: https://agoodmu.github.io
-title: Goldydocs
+title: Walk The Walk
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
 
@@ -46,7 +46,7 @@ imaging:
 languages:
   en:
     languageName: English
-    title: Abyss
+    title: Walk The Walk
     params:
       description: A Journey Without Destination
   # cSpell:disable
@@ -127,7 +127,7 @@ params:
   prism_syntax_highlighting: false
 
   copyright:
-    authors: Jimmy Mu | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
+    authors: A Good Mu | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
     from_year: 2025
 
   # User interface configuration
