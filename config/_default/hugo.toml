@@ -1,11 +1,11 @@
 # set `baseurl` to your root domain
 # if you set it to "/" share icons won't work properly on production
-baseurl = "https://walker.muismu.com/" # Include trailing slash
-title = "Walker"  # Edit directly from config/_default/languages.toml # alternatively, uncomment this and remove `title` entry from the aforemention file.
-copyright = "Copyright © 2025–2025, Walker Mu; all rights reserved."
+baseurl = "https://example.com/" # Include trailing slash
+# title = "Clarity"  # Edit directly from config/_default/languages.toml # alternatively, uncomment this and remove `title` entry from the aforemention file.
+copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved."
 # canonifyurls = true
 
-theme = "hugo-clarity"
+theme = "github.com/agoodmu/hugo-clarity"
 disqusShortname = ""
 
 DefaultContentLanguage = "en"
@@ -25,7 +25,3 @@ home = ["HTML", "RSS", "JSON"]
 
 [pagination]
 pagerSize = 10
-
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'
