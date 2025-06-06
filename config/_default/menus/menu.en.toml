@@ -28,19 +28,24 @@
 [[main]]
   name = "Opinion"
   url = "post/opinion/"
-  weight = 41
+  weight = 50
+
+[[main]]
+  name = "Tutorial"
+  url = "https://learn.muismu.com"
+  weight = 60
 
 [[main]]
   name = "About"
   url = "about/"
-  weight = 50
+  weight = 100
 
 # social menu links
 
 [[social]]
   name = "github"
   type = "social"
-  weight = 60
+  weight = 200
   url = "https://github.com/agoodmu"
 
 #[[social]]
