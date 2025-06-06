@@ -27,7 +27,7 @@ numberOfTagsShown = 14 # Applies for all other default & custom taxonomies. e.g 
 # Switch to `true` if you'd like to group assets with the post itself (as a "leaf bundle").
 # This can be overridden at the page level; what is set below acts as the default if no page variable is set.
 # Details on page bundles: https://gohugo.io/content-management/page-bundles/#leaf-bundles
-usePageBundles = false
+usePageBundles = true
 
 # Path variables
 #
@@ -61,10 +61,10 @@ centerLogo = false # Set to "true" for centering or "false" for left aligned.
 codeMaxLines = 7
 
 # disable showing line numbers by default. Switch to `true` if you'd rather have them on.
-codeLineNumbers = false
+codeLineNumbers = true
 
 # enable math notation. Switch to `true` to enable mathjax in your site.
-enableMathNotation = false
+enableMathNotation = true
 
 # directory(s) where your articles are located
 mainSections = [
@@ -144,7 +144,7 @@ dateFormat = "2006-01-02" # Default to "Jan 2, 2006".
 
 # The year when this website was created, this value is used in the copyright
 # notice of the footer.
-# since = 2016
+since = 2025
 
 # Show related content at the end of an article or in the sidebar, based on the 'series' taxonomy.
 # Both parameters can be overridden in the post's front matter.
@@ -153,8 +153,8 @@ dateFormat = "2006-01-02" # Default to "Jan 2, 2006".
 
 # website author
 [author]
-name = "Jane Doe"
-# photo = "images/jane-doe.png" #include this if you would like to show the author photo on the sidebar
+name = "Walker Mu"
+photo = "images/jane-doe.png" #include this if you would like to show the author photo on the sidebar
 
 [plausible_analytics]
 enable = false                # to enable plausible analytics set to true.
