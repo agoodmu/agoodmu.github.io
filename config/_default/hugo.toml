@@ -24,4 +24,4 @@ series = "series"
 home = ["HTML", "RSS", "JSON"]
 
 [pagination]
-pagerSize = 10
+pagerSize = 5
