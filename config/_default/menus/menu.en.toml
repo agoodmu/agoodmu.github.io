@@ -5,35 +5,40 @@
 
 [[main]]
   name = "Technology"
-  url = "post/travel/"
+  url = "tech/"
   weight = 10
 
 [[main]]
   parent = "Technology"
   name = "Security"
-  url = "post/security/"
+  url = "tech/security/"
   weight = 20
 
 [[main]]
   parent = "Technology"
   name = "Cloud"
-  url = "post/cloud/"
+  url = "tech/cloud/"
   weight = 30
 
 [[main]]
   name = "Journey"
-  url = "post/journey/"
+  url = "journey/"
   weight = 40
 
 [[main]]
   name = "Opinion"
-  url = "post/opinion/"
+  url = "opinion/"
   weight = 50
 
 [[main]]
   name = "Tutorial"
   url = "https://learn.muismu.com"
   weight = 60
+
+[[main]]
+  name = "Awesome"
+  url = "awesome/"
+  weight = 70
 
 [[main]]
   name = "About"
