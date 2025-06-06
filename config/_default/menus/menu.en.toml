@@ -1,41 +1,46 @@
 [[main]]
   name = "Home"
   url = ""
-  weight = -300
+  weight = 1
 
 [[main]]
   name = "Technology"
   url = "post/travel/"
-  weight = -200
+  weight = 10
 
 [[main]]
   parent = "Technology"
   name = "Security"
   url = "post/security/"
-  weight = -199
+  weight = 20
 
 [[main]]
   parent = "Technology"
   name = "Cloud"
   url = "post/cloud/"
-  weight = -198
+  weight = 30
 
 [[main]]
   name = "Travel"
   url = "post/travel/"
-  weight = -100
+  weight = 40
+
+[[main]]
+  name = "Immigration"
+  url = "post/immigration/"
+  weight = 40
 
 [[main]]
   name = "About"
   url = "about/"
-  weight = -99
+  weight = 50
 
 # social menu links
 
 [[social]]
   name = "github"
   type = "social"
-  weight = 1
+  weight = 60
   url = "https://github.com/agoodmu"
 
 #[[social]]
@@ -45,7 +50,7 @@
 
 [[social]]
   name = "rss"
-  weight = 4
+  weight = 61
   url = "index.xml"
 
 # other supported social links
