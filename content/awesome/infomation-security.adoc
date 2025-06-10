@@ -27,7 +27,7 @@ series:
 |===
 |Name |URL |Remarks
 
-|Common Criteria, https://commoncriteriaportal.org/index.cfm, Security Evaluation
+|Common Criteria |https://commoncriteriaportal.org/index.cfm| Security Evaluation
 
 |===
 
