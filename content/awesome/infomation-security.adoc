@@ -25,8 +25,9 @@ series:
 .WebSite
 [%autowidth]
 |===
-|Name, header row |URL, header row| Remarks, header row
+|Name |URL |Remarks
 
 |Common Criteria, https://commoncriteriaportal.org/index.cfm, Security Evaluation
+
 |===
 
