@@ -70,7 +70,8 @@ enableMathNotation = true
 mainSections = [
   "journey",
   "opinion",
-  "tech"
+  "tech",
+  "awesome"
 ] # see config details here https://gohugo.io/functions/where/#mainsections
 
 # Label Non inline images on an article body
@@ -129,16 +130,16 @@ blogDir = "content"
 
 
 # Maximum number of recent posts. (default: 8)
-# numberOfRecentPosts = 8
+numberOfRecentPosts = 3
 
 # Maximum number of featured posts. (default: 8)
-# numberOfFeaturedPosts = 8
+numberOfFeaturedPosts = 5
 
 # Pin featured posts in list.
-# pinFeatured = true
+pinFeatured = true
 
 # Maximum number of pinned featured posts. (default: 8)
-# numberOfPinnedPosts = 8
+numberOfPinnedPosts = 5
 
 # Date format. Checkout https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference for details.
 dateFormat = "2006-01-02" # Default to "Jan 2, 2006".
@@ -150,7 +151,7 @@ since = 2025
 
 # Show related content at the end of an article or in the sidebar, based on the 'series' taxonomy.
 # Both parameters can be overridden in the post's front matter.
-showRelatedInArticle = true
+showRelatedInArticle = false
 showRelatedInSidebar = true
 
 # website author
