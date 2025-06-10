@@ -1,5 +1,5 @@
 ---
-title: "Landing Zone" # Title of the blog post.
+title: "Landing Zone Concept" # Title of the blog post.
 date: 2025-06-06T10:46:45+08:00 # Date of post creation.
 description: "Article description." # Description used for search engine.
 featured: true # Sets if post is a featured post, making appear on the home page side bar.

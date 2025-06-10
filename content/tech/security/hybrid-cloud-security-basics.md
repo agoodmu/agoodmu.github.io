@@ -1,0 +1,28 @@
+---
+title: "Hybrid Cloud Security Basics"
+date: 2025-06-10T09:02:07+08:00
+description: "Article description."
+featured: true
+draft: false
+toc: true
+# menu: main
+usePageBundles: false
+featureImage: "/images/path/file.jpg" # Sets featured image on blog post.
+featureImageAlt: 'Description of image' # Alternative text for featured image.
+featureImageCap: 'This is the featured image.' # Caption (optional).
+thumbnail: "/images/path/thumbnail.png" # Sets thumbnail image appearing inside card on homepage.
+shareImage: "/images/path/share.png" # Designate a separate image for social media sharing.
+codeMaxLines: 10
+codeLineNumbers: true
+figurePositionShow: true # Override global value for showing the figure label.
+categories:
+  - Technology
+tags:
+  - Cloud
+  - Security
+# comment: false # Disable comment if false.
+series:
+  - Hybrid Cloud Security
+---
+
+**Insert Lead paragraph here.**
