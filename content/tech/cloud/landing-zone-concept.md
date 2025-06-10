@@ -18,9 +18,12 @@ figurePositionShow: true # Override global value for showing the figure label.
 categories:
   - Technology
 tags:
-  - Tag_name1
-  - Tag_name2
+  - Cloud
+  - Architecture
 # comment: false # Disable comment if false.
+series:
+  - Landing Zone
+  - Cloud Foundation
 ---
 
 **Insert Lead paragraph here.**
