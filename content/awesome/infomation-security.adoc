@@ -27,7 +27,12 @@ series:
 |===
 |Name |URL |Remarks
 
-|Common Criteria |https://commoncriteriaportal.org/index.cfm| Security Evaluation
+|Common Criteria | https://commoncriteriaportal.org/index.cfm | Security Evaluation 
+|Checkov | https://www.checkov.io | Iac Tool | 
+|CSF 2.0 | https://www.nist.gov/cyberframework | Security Framework |
+|NIST Publications | https://csrc.nist.gov/publications | Security Standard & Framework |
+|CCM | https://cloudsecurityalliance.org/research/cloud-controls-matrix# | Cloud Control Matrix |
+
 
 |===
 
