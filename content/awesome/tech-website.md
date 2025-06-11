@@ -51,5 +51,7 @@ draft: true
 * https://kargo.akuity.io/
 * https://cloud.google.com/blog/products/gcp/exploring-container-security-isolation-at-different-layers-of-the-kubernetes-stack
 *  https://www.anthropic.com/research/building-effective-agents
-*  https://cheatsheetseries.owasp.org/index.html
+*  https://cheatsheetseries.owasp.org/index.html 
+* https://www.mongodb.com/try/download/database-tools/releases/archive
+* https://www.davidc.net/sites/default/subnets/subnets.html
 
