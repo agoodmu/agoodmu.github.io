@@ -32,7 +32,7 @@
 
 [[main]]
   name = "Tutorial"
-  url = "https://tutorial.muismu.com"
+  url = "tutorial/"
   weight = 60
 
 [[main]]
