@@ -36,6 +36,11 @@
   weight = 60
 
 [[main]]
+  name = "Workshop"
+  url = "workshop/"
+  weight = 63
+
+[[main]]
   name = "Awesome"
   url = "awesome/"
   weight = 70
