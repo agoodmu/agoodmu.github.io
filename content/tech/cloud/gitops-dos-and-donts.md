@@ -27,6 +27,6 @@ serials:
 
 **Insert Lead paragraph here.**
 
-{{% notice note "Note Title" */%}}
-This will be the content of the note.
+{{% notice style="green" title="Green" %}}
+A **green** disclaimer
 {{% /notice %}}
