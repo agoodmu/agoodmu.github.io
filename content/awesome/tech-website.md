@@ -55,4 +55,5 @@ draft: true
 * https://www.mongodb.com/try/download/database-tools/releases/archive
 * https://www.davidc.net/sites/default/subnets/subnets.html
 * https://favicon.io/
+* https://fontawesome.com/
 
