@@ -31,3 +31,7 @@ serials:
 {{% notice note "Note" %}}
 This is a standard "note" style.
 {{% /notice %}}
+
+{{% anotice style="primary" title="There may be pirates" icon="skull-crossbones" %}}
+It is all about the boxes.
+{{% /anotice %}}
