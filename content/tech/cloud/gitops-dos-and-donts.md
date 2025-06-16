@@ -34,8 +34,11 @@ This is a standard "note" style.
    
 
 
-{{% anotice style="primary" title="There may be pirates" icon="skull-crossbones" %}}
-It is all about the boxes.
-{{% /anotice %}}  
-
+{{ partial "shortcodes/anotice.html" (dict
+  "page"  .
+  "style" "primary"
+  "title" "There may be pirates"
+  "icon" "skull-crossbones"
+  "content" "It is all about the boxes."
+)}}
 
