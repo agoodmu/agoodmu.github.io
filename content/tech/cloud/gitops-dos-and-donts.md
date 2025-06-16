@@ -27,6 +27,6 @@ serials:
 
 **Insert Lead paragraph here.**
 
-{{% notice primary "There may be pirates" "skull-crossbones" %}}
-It is all about the boxes.
+{{% notice note "Note Title" */%}}
+This will be the content of the note.
 {{% /notice %}}
