@@ -34,11 +34,3 @@ This is a standard "note" style.
    
 
 
-{{ partial "shortcodes/anotice.html" (dict
-  "page"  .
-  "style" "primary"
-  "title" "There may be pirates"
-  "icon" "skull-crossbones"
-  "content" "It is all about the boxes."
-)}}
-
