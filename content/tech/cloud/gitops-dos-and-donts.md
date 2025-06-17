@@ -38,12 +38,12 @@ This is a standard "note" style.
 
 
 
-```tree
+{{% tree %}}
 - home | folder
   - [.config](http://example.com) | folder
   - My Documents | folder | magic
     - home.php | fa-fw fab fa-php | #888cc4
-```
+{{% /tree %}}
    
 
 
