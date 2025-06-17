@@ -28,7 +28,11 @@ serials:
 **Insert Lead paragraph here.**   
 
 
-{{% notice note "Note" %}}
+{{% notice tip "Do's" %}}
+This is a standard "note" style.
+{{% /notice %}}
+
+{{% notice warning "Dont's" %}}
 This is a standard "note" style.
 {{% /notice %}}
    
