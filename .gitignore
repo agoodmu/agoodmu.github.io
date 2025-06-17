@@ -33,3 +33,4 @@ go.work.sum
 
 resources/
 .hugo_build.lock
+public/
