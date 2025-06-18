@@ -1,5 +1,5 @@
 {{- $_hugo_config := `{ "version": 1 }` }}
-{{ $content := .Inner | .Page.RenderString }}
+{{ $content := .Inner | safeHTML }}
 <div class="list-tree">
 {{- $matches := findRESubmatch `<li>([\s\S]*?)(</li|<ul)` $content }}
 {{- range $matches }}
