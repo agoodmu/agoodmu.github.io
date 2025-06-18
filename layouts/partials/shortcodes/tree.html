@@ -22,7 +22,7 @@
     {{- end }}
 
     {{- if $style }}
-      {{- $boxStyle := partial "_relearn/boxStyle.gotmpl" (dict "style" $style) }}
+      {{- $boxStyle := partial "boxStyle.gotmpl" (dict "style" $style) }}
       {{- if $boxStyle.style }}
         {{- $replacement = printf `<li><i class="%s cstyle %s"></i><span>%s</span>%s` $iconClass $style $name $rest }}
       {{- else }}
