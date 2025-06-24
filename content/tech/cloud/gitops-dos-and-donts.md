@@ -49,6 +49,8 @@ func main() {
 }
 {{< /highlight >}}
 
+This is {{< year >}}, and look at how far we've come.
+
    
 
 
