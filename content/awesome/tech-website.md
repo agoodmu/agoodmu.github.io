@@ -56,4 +56,6 @@ draft: true
 * https://www.davidc.net/sites/default/subnets/subnets.html
 * https://favicon.io/
 * https://fontawesome.com/
-
+* https://www.sleuthkit.org/
+* https://dfrws.org/
+* https://github.com/makelinux/linux_kernel_map/tree/main
