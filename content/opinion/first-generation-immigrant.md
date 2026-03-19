@@ -1,7 +1,7 @@
 ---
-title: "On Native Tone" # Title of the blog post.
-date: 2025-06-06T10:45:12+08:00 # Date of post creation.
-description: "Article description." # Description used for search engine.
+title: "First Generation Immigrant" # Title of the blog post.
+date: 2025-07-17T17:24:42+12:00 # Date of post creation.
+description: "Thought on being first generation Immigrant" # Description used for search engine.
 featured: true # Sets if post is a featured post, making appear on the home page side bar.
 draft: true # Sets whether to render this page. Draft of true will not be rendered.
 toc: false # Controls if a table of contents should be generated for first-level links automatically.
@@ -16,11 +16,12 @@ codeMaxLines: 10 # Override global value for how many lines within a code block 
 codeLineNumbers: false # Override global value for showing of line numbers within code block.
 figurePositionShow: true # Override global value for showing the figure label.
 categories:
-  - Technology
+  - Life
 tags:
-  - Tag_name1
-  - Tag_name2
+  - immigrant
+  - culture
 # comment: false # Disable comment if false.
 ---
 
-**Insert Lead paragraph here.**
+* Fresh Off Boat *
+Landed on a place over 10,000 kilometer away from where i was born, the excitement had faded away when i stepped off the plane. it was quite brave for me when my thoughts go back to 30th of August, 2018.

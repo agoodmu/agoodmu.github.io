@@ -6,7 +6,7 @@ draft: true
 
 # Introduction
 
-# Website List 
+# Website List
 
 * https://bgp.he.net/
 * https://0xffsec.com/handbook/information-gathering/assets-discovery/
@@ -51,7 +51,7 @@ draft: true
 * https://kargo.akuity.io/
 * https://cloud.google.com/blog/products/gcp/exploring-container-security-isolation-at-different-layers-of-the-kubernetes-stack
 *  https://www.anthropic.com/research/building-effective-agents
-*  https://cheatsheetseries.owasp.org/index.html 
+*  https://cheatsheetseries.owasp.org/index.html
 * https://www.mongodb.com/try/download/database-tools/releases/archive
 * https://www.davidc.net/sites/default/subnets/subnets.html
 * https://favicon.io/
@@ -59,3 +59,6 @@ draft: true
 * https://www.sleuthkit.org/
 * https://dfrws.org/
 * https://github.com/makelinux/linux_kernel_map/tree/main
+* https://www.autopsy.com/
+* https://forensiccontrol.com/
+* https://www.tomshardware.com/how-to/install-windows-11-without-microsoft-account
