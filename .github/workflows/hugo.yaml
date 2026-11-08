@@ -7,7 +7,7 @@ env:
   NODE_VERSION: 24.22.1
 
   # Set the build time zone
-  TZ: Europe/Oslo
+  TZ: Asia/Shanghai
 on:
   push:
     branches:
@@ -118,7 +118,6 @@ jobs:
           hugo build \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/.cache/hugo"
 
       - name: Cache save
