@@ -1,0 +1,127 @@
+.ctopics {
+  margin-bottom: 2rem;
+}
+
+.ctopics-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.ctopics-heading h2 {
+  margin: 0;
+  color: var(--header-text);
+}
+
+.ctopics-heading a,
+.ctopics-more {
+  color: var(--theme);
+  font-size: 0.95rem;
+}
+
+.ctopics-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.ctopics-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--translucent);
+  border-radius: 6px;
+  background: var(--post-bg);
+  color: var(--text);
+}
+
+.ctopics-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.ctopics-card h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.ctopics-card h3 a {
+  color: var(--header-text);
+}
+
+.ctopics-description {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.ctopics-posts {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.ctopics-posts li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--translucent);
+}
+
+.ctopics-posts a {
+  min-width: 0;
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.ctopics-posts time {
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.ctopics-more {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0.5rem 0;
+}
+
+.ctopics a:hover {
+  color: var(--theme);
+  text-decoration: underline;
+}
+
+.ctopics a:focus-visible {
+  outline: 2px solid var(--theme);
+  outline-offset: 4px;
+}
+
+.ctopics-page-heading {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: var(--post-bg);
+  border-radius: 6px;
+}
+
+.ctopics-page-heading h1 {
+  margin-top: 0;
+  color: var(--header-text);
+}
+
+@media (min-width: 768px) {
+  .ctopics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

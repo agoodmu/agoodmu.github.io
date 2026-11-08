@@ -1,0 +1,68 @@
+{{ $overview := site.GetPage "/series" }}
+{{ $cards := slice }}
+
+{{ with $overview }}
+  {{ range .Pages }}
+    {{ if and (eq .Kind "term") (eq .Params.homeFeatured true) }}
+      {{ $posts := where .RegularPages "Type" "in" site.Params.mainSections }}
+      {{ $posts = where $posts "Draft" false }}
+
+      {{ if gt (len $posts) 0 }}
+        {{ $cards = $cards | append (dict
+          "page" .
+          "posts" $posts
+          "order" (.Params.homeOrder | default 999)
+        ) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with $cards }}
+<section class="ctopics" aria-labelledby="ctopics-title">
+  <header class="ctopics-heading">
+    <h2 id="ctopics-title">专题</h2>
+    <a href="{{ $overview.RelPermalink }}">全部专题</a>
+  </header>
+
+  <div class="ctopics-grid">
+    {{ range sort . "order" }}
+      {{ $topic := .page }}
+      {{ $posts := .posts.ByDate.Reverse }}
+      {{ $title := $topic.Params.displayTitle | default $topic.Title }}
+
+      <article class="ctopics-card">
+        <div class="ctopics-meta">
+          <span>{{ len $posts }} 篇文章</span>
+          {{ with $topic.Params.status }}<span>{{ . }}</span>{{ end }}
+        </div>
+
+        <h3>
+          <a href="{{ $topic.RelPermalink }}">{{ $title }}</a>
+        </h3>
+
+        {{ with $topic.Description }}
+          <p class="ctopics-description">{{ . }}</p>
+        {{ end }}
+
+        <ul class="ctopics-posts">
+          {{ range first 3 $posts }}
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ if not .Date.IsZero }}
+              <time datetime="{{ .Date.Format "2006-01-02" }}">
+                {{ .Date.Format "01.02" }}
+              </time>
+            {{ end }}
+          </li>
+          {{ end }}
+        </ul>
+
+        <a class="ctopics-more" href="{{ $topic.RelPermalink }}">
+          查看专题
+        </a>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

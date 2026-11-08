@@ -1,6 +1,9 @@
 # enable search
 enableSearch = true
 
+showHomeTopics = true
+customCSS = ["css/topics.css"]
+
 # socials
 twitter = "@janedoe"
 largeTwitterCard = false                                                                          # set to true if you want to show a large twitter card image. The default is a small twitter card image

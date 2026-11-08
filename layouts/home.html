@@ -1,0 +1,32 @@
+{{ define "main" }}
+  {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+
+  {{ if eq site.Params.pinFeatured true }}
+    {{ $limit := site.Params.numberOfPinnedPosts | default 8 }}
+    {{ $featured := first $limit (where $pages "Params.featured" true) }}
+    {{ $normal := $pages | collections.SymDiff $featured }}
+    {{ $pages = $featured | append $normal }}
+  {{ end }}
+
+  {{ $paginator := .Paginate $pages }}
+
+  <div class="grid-inverse wrap content">
+    <div>
+      {{ if and site.Params.showHomeTopics (eq $paginator.PageNumber 1) }}
+        {{ partial "home-topics.html" . }}
+      {{ end }}
+
+      <ul class="posts" id="posts">
+        {{ range $paginator.Pages }}
+          {{ partial "excerpt" . }}
+        {{ end }}
+
+        <li>
+          {{ template "_internal/pagination.html" . }}
+        </li>
+      </ul>
+    </div>
+
+    {{ partial "sidebar" . }}
+  </div>
+{{ end }}
