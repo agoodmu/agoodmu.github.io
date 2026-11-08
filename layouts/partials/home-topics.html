@@ -18,7 +18,7 @@
         {{- $cards = $cards | append (dict
           "page" .
           "updated" $latest.Lastmod.Unix
-          "updatedAt" $latest.Lastmod
+          "latestPost" $latest
         ) -}}
       {{- end -}}
     {{- end -}}
@@ -28,8 +28,8 @@
 {{- with $cards -}}
 <section class="ctopics" aria-labelledby="ctopics-title">
   <header class="ctopics-heading">
-    <h2 id="ctopics-title">专题</h2>
-    <a href="{{ $overview.RelPermalink }}">全部专题</a>
+    <h2 id="ctopics-title">Topics</h2>
+    <a href="{{ $overview.RelPermalink }}">All topics</a>
   </header>
 
   <div class="ctopics-grid">
@@ -41,8 +41,12 @@
       {{- with $topic.Description }}
       <p class="ctopics-description">{{ . }}</p>
       {{- end }}
-      {{- with .updatedAt }}
-      <p class="ctopics-updated">最近更新：<time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ .Format "2006-01-02" }}</time></p>
+      {{- with .latestPost }}
+      <div class="ctopics-latest">
+        <p class="ctopics-latest-label">Latest update</p>
+        <a class="ctopics-latest-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <p class="ctopics-updated">Updated: <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Lastmod.Format "2006-01-02" }}</time></p>
+      </div>
       {{- end }}
     </article>
     {{- end }}

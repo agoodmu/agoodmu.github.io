@@ -63,9 +63,29 @@
   overflow-wrap: anywhere;
 }
 
+.ctopics-latest {
+  margin-top: auto;
+  padding-top: 0.9rem;
+  min-width: 0;
+}
+
+.ctopics-latest-label {
+  margin: 0 0 0.35rem;
+  color: var(--text);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.ctopics-latest-title {
+  display: block;
+  color: var(--header-text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
 .ctopics-updated {
-  margin: auto 0 0;
-  padding-top: 0.8rem;
+  margin: 0.35rem 0 0;
   color: var(--text);
   font-size: 0.875rem;
   line-height: 1.5;
