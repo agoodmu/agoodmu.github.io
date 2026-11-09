@@ -1,0 +1,19 @@
+{{- $t := site.Title -}}
+<a href='{{ absLangURL "" }}' class="nav_brand nav_item{{ with .class }} {{ . }}{{ end }}" title="{{ $t }}">
+  {{- with .logo }}
+  {{- $lightLogo := site.Params.logoLight | default "logos/logo-light.png" -}}
+  {{- $darkLogo := site.Params.logoDark | default "logos/logo-dark.png" -}}
+  <img src="{{ absURL $lightLogo }}" class="logo logo-mode-light" alt="{{ $t }}" width="389" height="72">
+  <img src="{{ absURL $darkLogo }}" class="logo logo-mode-dark" alt="{{ $t }}" width="389" height="72">
+  {{- else -}}
+    {{- $t -}}
+  {{- end }}
+  {{- if ne (strings.HasSuffix .class "center") true }}
+  <div class="nav_close">
+    <div>
+      {{- partialCached "sprite" (dict "icon" "open-menu") -}}
+      {{- partial "sprite" (dict "icon" "closeme") -}}
+    </div>
+  </div>
+  {{- end }}
+</a>

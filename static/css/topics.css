@@ -1,3 +1,226 @@
+/* CloudSouth: airy daylight palette, with Clarity's existing mode toggle. */
+html {
+  --cs-page: #f3f8fb;
+  --cs-surface: #ffffff;
+  --cs-topic: #eaf5fa;
+  --cs-nav: #ffffff;
+  --cs-footer: #eaf2f7;
+  --cs-heading: #183e53;
+  --cs-text: #425c6b;
+  --cs-muted: #617887;
+  --cs-border: #d9e7ee;
+  --cs-accent: #0077b8;
+  --cs-accent-hover: #005d91;
+  --cs-on-accent: #ffffff;
+  --cs-code: #edf4f8;
+  --cs-shadow: rgba(24, 62, 83, 0.06);
+  --cs-edge: rgba(0, 119, 184, 0.58);
+  --cs-glow: rgba(0, 119, 184, 0.19);
+  --cs-tint: rgba(0, 119, 184, 0.045);
+  --cs-logo-light-display: inline-block;
+  --cs-logo-dark-display: none;
+  color-scheme: light;
+}
+
+html[data-mode="dim"] {
+  --cs-page: #102431;
+  --cs-surface: #183444;
+  --cs-topic: #193b4c;
+  --cs-nav: #132d3d;
+  --cs-footer: #132d3d;
+  --cs-heading: #edf6fa;
+  --cs-text: #cadce5;
+  --cs-muted: #9eb7c4;
+  --cs-border: #2c4e60;
+  --cs-accent: #65d5e8;
+  --cs-accent-hover: #94e5f1;
+  --cs-on-accent: #102431;
+  --cs-code: #132d3d;
+  --cs-shadow: rgba(0, 0, 0, 0.12);
+  --cs-edge: rgba(101, 213, 232, 0.68);
+  --cs-glow: rgba(101, 213, 232, 0.22);
+  --cs-tint: rgba(101, 213, 232, 0.05);
+  --cs-logo-light-display: none;
+  --cs-logo-dark-display: inline-block;
+  color-scheme: dark;
+}
+
+/* Bind the palette to Clarity's variables in both modes. The more specific
+   selectors also override the theme's automatic OS-dark variable block. */
+html:not([data-mode="dim"]),
+html[data-mode="dim"] {
+  --color-mode: 'lit';
+  --bg: var(--cs-page);
+  --choice-bg: var(--cs-page);
+  --light: var(--cs-on-accent);
+  --dark: var(--cs-heading);
+  --haze: var(--cs-footer);
+  --gray: var(--cs-heading);
+  --accent: var(--cs-accent);
+  --text: var(--cs-text);
+  --text-hover: var(--cs-heading);
+  --header-text: var(--cs-heading);
+  --theme: var(--cs-accent);
+  --post-bg: var(--cs-surface);
+  --footer-bg: var(--cs-footer);
+  --shadow: var(--cs-shadow);
+  --translucent: var(--cs-border);
+  --translucent-light: var(--cs-code);
+  --code-bg: var(--cs-code);
+  --inlineColor: var(--cs-heading);
+  --table-bg: var(--cs-surface);
+  --table-haze: var(--cs-code);
+  --table-border: var(--cs-border);
+}
+
+html[data-mode="dim"] {
+  --color-mode: 'dim';
+}
+
+html body {
+  background: var(--cs-page);
+  color: var(--cs-text);
+}
+
+/* Navigation and drawer: remove the theme's fixed dark-blue backgrounds. */
+html .nav_header {
+  background-color: var(--cs-nav);
+  box-shadow: 0 1px 0 var(--cs-border);
+}
+
+html .nav {
+  color: var(--cs-heading);
+}
+
+html .nav_active,
+html .nav_item:not(.nav_brand):hover {
+  background-color: var(--cs-topic);
+  color: var(--cs-accent);
+}
+
+html .nav_close svg,
+html .nav .icon,
+html .nav .icon svg,
+html .nav svg.icon {
+  fill: var(--cs-heading);
+}
+
+html .nav_open + .nav_sub {
+  background: var(--cs-nav);
+  color: var(--cs-text);
+}
+
+html .nav_open + .nav_sub::after {
+  background: var(--cs-nav);
+  box-shadow: 0 8px 24px var(--cs-shadow);
+}
+
+html .nav_open + .nav_sub::before,
+html .nav_open + .nav_sub .nav_child:first-child::before {
+  border-bottom-color: var(--cs-nav);
+}
+
+html:not([data-mode="dim"]) .nav_icon {
+  filter: brightness(0) saturate(100%);
+}
+
+html .nav_brand img.logo-mode-light {
+  display: var(--cs-logo-light-display);
+}
+
+html .nav_brand img.logo-mode-dark {
+  display: var(--cs-logo-dark-display);
+}
+
+/* Reading surfaces, labels, footer and common controls. */
+html .posts > .post_item {
+  background: var(--cs-surface);
+  box-shadow: inset 0 0 0 1px var(--cs-border), 0 4px 18px -12px var(--cs-shadow);
+}
+
+html .footer {
+  background: var(--cs-footer);
+  color: var(--cs-muted);
+  border-top: 1px solid var(--cs-border);
+}
+
+html .pale {
+  opacity: 1;
+  color: var(--cs-muted);
+}
+
+html .post_content {
+  color: var(--cs-text);
+}
+
+html .post_content a:not(.button),
+html .author_bio a,
+html .post_link a:hover,
+html .post_content .link {
+  color: var(--cs-accent);
+}
+
+html .button,
+html .button_back,
+html .button_tally,
+html .pagination .page-link,
+html .to_top,
+html .to-top {
+  background-color: var(--cs-accent);
+  border-color: var(--cs-accent);
+  color: var(--cs-on-accent);
+}
+
+html .button:hover,
+html .button:focus,
+html .button_back:hover,
+html .pagination .page-item.active a {
+  background-color: var(--cs-accent-hover);
+  border-color: var(--cs-accent-hover);
+  color: var(--cs-on-accent);
+}
+
+html .button_translucent {
+  background: var(--cs-topic);
+  color: var(--cs-accent);
+  border-color: var(--cs-border);
+}
+
+html .to_top svg,
+html .to-top svg {
+  fill: var(--cs-on-accent);
+}
+
+html .post_header {
+  background-color: var(--cs-nav);
+}
+
+html blockquote {
+  background: var(--cs-code);
+  color: var(--cs-text);
+  border-left-color: var(--cs-accent);
+}
+
+html .sidebar_inner::before,
+html hr {
+  background: var(--cs-border);
+}
+
+/* Daylight headings and icon colors should not inherit OS-dark styling. */
+html:not([data-mode="dim"]) svg.icon {
+  fill: var(--cs-heading);
+}
+
+html:not([data-mode="dim"]) .to_top svg,
+html:not([data-mode="dim"]) .to-top svg {
+  fill: var(--cs-on-accent);
+}
+
+html a:focus-visible {
+  outline: 2px solid var(--cs-accent) !important;
+  outline-offset: 3px;
+}
+
 .ctopics {
   margin-bottom: 2rem;
 }
@@ -21,17 +244,11 @@
   font-size: 0.95rem;
 }
 
-/* Up to four cards: one column on mobile, two on larger screens. */
+/* Up to four topics. Mobile: one column; larger screens: two columns. */
 .ctopics-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
-}
-
-@media (min-width: 768px) {
-  .ctopics-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 .ctopics-card {
@@ -39,9 +256,9 @@
   flex-direction: column;
   min-width: 0;
   padding: 1.25rem;
-  border: 1px solid var(--translucent);
+  border: 1px solid var(--cs-border);
   border-radius: 6px;
-  background: var(--post-bg);
+  background: var(--cs-topic);
   color: var(--text);
 }
 
@@ -71,7 +288,7 @@
 
 .ctopics-latest-label {
   margin: 0 0 0.35rem;
-  color: var(--text);
+  color: var(--cs-muted);
   font-size: 0.875rem;
   line-height: 1.5;
 }
@@ -93,15 +310,10 @@
   text-decoration: underline;
 }
 
-.ctopics a:focus-visible {
-  outline: 2px solid var(--theme);
-  outline-offset: 4px;
-}
-
 .ctopics-page-heading {
   margin-bottom: 1.5rem;
   padding: 1.25rem;
-  background: var(--post-bg);
+  background: var(--cs-topic);
   border-radius: 6px;
 }
 
@@ -110,79 +322,53 @@
   color: var(--header-text);
 }
 
-/* Shared hover treatment for topic cards and Clarity article-list cards.
-   Inset shadows draw the edge/tint without changing dimensions or link targets. */
 .ctopics-card,
 .posts > .post_item {
-  --card-edge: rgba(0, 119, 184, 0.65);
-  --card-glow: rgba(0, 119, 184, 0.22);
-  --card-tint: rgba(0, 119, 184, 0.045);
-  --card-edge: color-mix(in srgb, var(--theme, #0077b8) 70%, transparent);
-  --card-glow: color-mix(in srgb, var(--theme, #0077b8) 22%, transparent);
-  --card-tint: color-mix(in srgb, var(--theme, #0077b8) 5%, transparent);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-html[data-mode="dim"] .ctopics-card,
-html[data-mode="dim"] .posts > .post_item {
-  --card-edge: rgba(101, 213, 232, 0.7);
-  --card-glow: rgba(101, 213, 232, 0.25);
-  --card-tint: rgba(101, 213, 232, 0.055);
-  --card-edge: color-mix(in srgb, color-mix(in srgb, var(--theme, #0077b8) 55%, white) 70%, transparent);
-  --card-glow: color-mix(in srgb, color-mix(in srgb, var(--theme, #0077b8) 55%, white) 25%, transparent);
-  --card-tint: color-mix(in srgb, color-mix(in srgb, var(--theme, #0077b8) 55%, white) 6%, transparent);
-}
-
-@media (prefers-color-scheme: dark) {
-  html:not([data-mode="lit"]) .ctopics-card,
-  html:not([data-mode="lit"]) .posts > .post_item {
-    --card-edge: rgba(101, 213, 232, 0.7);
-    --card-glow: rgba(101, 213, 232, 0.25);
-    --card-tint: rgba(101, 213, 232, 0.055);
-    --card-edge: color-mix(in srgb, color-mix(in srgb, var(--theme, #0077b8) 55%, white) 70%, transparent);
-    --card-glow: color-mix(in srgb, color-mix(in srgb, var(--theme, #0077b8) 55%, white) 25%, transparent);
-    --card-tint: color-mix(in srgb, color-mix(in srgb, var(--theme, #0077b8) 55%, white) 6%, transparent);
-  }
-}
-
-/* Mouse/trackpad only: no sticky hover on touch screens. */
 @media (hover: hover) and (pointer: fine) {
   .ctopics-card:hover,
   .posts > .post_item:hover {
-    border-color: var(--card-edge);
+    border-color: var(--cs-edge);
     box-shadow:
-      inset 0 0 0 1px var(--card-edge),
-      inset 0 0 0 9999px var(--card-tint),
-      0 0 20px -5px var(--card-glow),
-      0 12px 30px -20px var(--card-edge);
+      inset 0 0 0 1px var(--cs-edge),
+      inset 0 0 0 9999px var(--cs-tint),
+      0 0 20px -5px var(--cs-glow),
+      0 12px 30px -20px var(--cs-edge);
   }
 }
 
-/* Keyboard access keeps the normal link outline as well as the card glow. */
 @supports selector(:has(a:focus-visible)) {
   .ctopics-card:has(a:focus-visible),
   .posts > .post_item:has(a:focus-visible) {
-    border-color: var(--card-edge);
+    border-color: var(--cs-edge);
     box-shadow:
-      inset 0 0 0 1px var(--card-edge),
-      inset 0 0 0 9999px var(--card-tint),
-      0 0 20px -5px var(--card-glow),
-      0 12px 30px -20px var(--card-edge);
+      inset 0 0 0 1px var(--cs-edge),
+      inset 0 0 0 9999px var(--cs-tint),
+      0 0 20px -5px var(--cs-glow),
+      0 12px 30px -20px var(--cs-edge);
   }
 }
 
 @supports not selector(:has(a:focus-visible)) {
   .ctopics-card:focus-within,
   .posts > .post_item:focus-within {
-    border-color: var(--card-edge);
-    box-shadow: inset 0 0 0 1px var(--card-edge), 0 0 20px -5px var(--card-glow);
+    border-color: var(--cs-edge);
+    box-shadow: inset 0 0 0 1px var(--cs-edge), 0 0 20px -5px var(--cs-glow);
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .ctopics-card,
-  .posts > .post_item {
-    transition: none;
+@media (min-width: 768px) {
+  .ctopics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 769px) {
+  html .nav_body {
+    background-color: var(--cs-nav);
+    color: var(--cs-heading);
   }
 }
 
@@ -198,5 +384,12 @@ html[data-mode="dim"] .posts > .post_item {
   }
   .ctopics-description {
     font-size: 0.875rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ctopics-card,
+  .posts > .post_item {
+    transition: none;
   }
 }
