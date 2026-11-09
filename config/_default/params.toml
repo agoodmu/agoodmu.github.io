@@ -8,7 +8,7 @@ customCSS = ["css/topics.css"]
 #twitter = "@janedoe"
 #largeTwitterCard = false                                                                          # set to true if you want to show a large twitter card image. The default is a small twitter card image
 introDescription = "Technologist, perpetual student, teacher, continual incremental improvement."
-# introURL = "about/" # set the url for the 'read more' button below the introDescription, or set to false to not show the button
+introURL = "about/" # set the url for the 'read more' button below the introDescription, or set to false to not show the button
 # description = "A theme based on VMware's Clarity Design System for publishing technical blogs with Hugo." # Set your site's meta tag (SEO) description here. Alternatively set this description in your home page content file e.g. content/_index.md. Whatever is set in the latter will take precedence.
 # keywords = ["design", "clarity", "hugo theme"] # Set your site's meta tag (SEO) keywords here. Alternatively set these in your home page content file e.g. content/_index.md. Whatever is set in the latter will take precedence.
 
@@ -151,7 +151,7 @@ dateFormat = "2006-01-02" # Default to "Jan 2, 2006".
 
 # The year when this website was created, this value is used in the copyright
 # notice of the footer.
-# since = 2016
+since = 2026
 
 # Show related content at the end of an article or in the sidebar, based on the 'series' taxonomy.
 # Both parameters can be overridden in the post's front matter.
