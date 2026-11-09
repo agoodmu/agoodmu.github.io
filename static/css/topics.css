@@ -110,6 +110,82 @@
   color: var(--header-text);
 }
 
+/* Shared hover treatment for topic cards and Clarity article-list cards.
+   Inset shadows draw the edge/tint without changing dimensions or link targets. */
+.ctopics-card,
+.posts > .post_item {
+  --card-edge: rgba(0, 119, 184, 0.65);
+  --card-glow: rgba(0, 119, 184, 0.22);
+  --card-tint: rgba(0, 119, 184, 0.045);
+  --card-edge: color-mix(in srgb, var(--theme, #0077b8) 70%, transparent);
+  --card-glow: color-mix(in srgb, var(--theme, #0077b8) 22%, transparent);
+  --card-tint: color-mix(in srgb, var(--theme, #0077b8) 5%, transparent);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+html[data-mode="dim"] .ctopics-card,
+html[data-mode="dim"] .posts > .post_item {
+  --card-edge: rgba(101, 213, 232, 0.7);
+  --card-glow: rgba(101, 213, 232, 0.25);
+  --card-tint: rgba(101, 213, 232, 0.055);
+  --card-edge: color-mix(in srgb, color-mix(in srgb, var(--theme, #0077b8) 55%, white) 70%, transparent);
+  --card-glow: color-mix(in srgb, color-mix(in srgb, var(--theme, #0077b8) 55%, white) 25%, transparent);
+  --card-tint: color-mix(in srgb, color-mix(in srgb, var(--theme, #0077b8) 55%, white) 6%, transparent);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode="lit"]) .ctopics-card,
+  html:not([data-mode="lit"]) .posts > .post_item {
+    --card-edge: rgba(101, 213, 232, 0.7);
+    --card-glow: rgba(101, 213, 232, 0.25);
+    --card-tint: rgba(101, 213, 232, 0.055);
+    --card-edge: color-mix(in srgb, color-mix(in srgb, var(--theme, #0077b8) 55%, white) 70%, transparent);
+    --card-glow: color-mix(in srgb, color-mix(in srgb, var(--theme, #0077b8) 55%, white) 25%, transparent);
+    --card-tint: color-mix(in srgb, color-mix(in srgb, var(--theme, #0077b8) 55%, white) 6%, transparent);
+  }
+}
+
+/* Mouse/trackpad only: no sticky hover on touch screens. */
+@media (hover: hover) and (pointer: fine) {
+  .ctopics-card:hover,
+  .posts > .post_item:hover {
+    border-color: var(--card-edge);
+    box-shadow:
+      inset 0 0 0 1px var(--card-edge),
+      inset 0 0 0 9999px var(--card-tint),
+      0 0 20px -5px var(--card-glow),
+      0 12px 30px -20px var(--card-edge);
+  }
+}
+
+/* Keyboard access keeps the normal link outline as well as the card glow. */
+@supports selector(:has(a:focus-visible)) {
+  .ctopics-card:has(a:focus-visible),
+  .posts > .post_item:has(a:focus-visible) {
+    border-color: var(--card-edge);
+    box-shadow:
+      inset 0 0 0 1px var(--card-edge),
+      inset 0 0 0 9999px var(--card-tint),
+      0 0 20px -5px var(--card-glow),
+      0 12px 30px -20px var(--card-edge);
+  }
+}
+
+@supports not selector(:has(a:focus-visible)) {
+  .ctopics-card:focus-within,
+  .posts > .post_item:focus-within {
+    border-color: var(--card-edge);
+    box-shadow: inset 0 0 0 1px var(--card-edge), 0 0 20px -5px var(--card-glow);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ctopics-card,
+  .posts > .post_item {
+    transition: none;
+  }
+}
+
 @media (max-width: 600px) {
   .ctopics-grid {
     gap: 0.75rem;
