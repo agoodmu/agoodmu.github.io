@@ -1,0 +1,10 @@
+{{- /* Homepage only: hide articles assigned to any series by default.
+     An article may explicitly opt back in with showOnHome = true. */ -}}
+{{- $pages := . -}}
+{{- $hidden := slice -}}
+{{- range $pages -}}
+  {{- if and (gt (len (.GetTerms "series")) 0) (ne .Params.showOnHome true) -}}
+    {{- $hidden = $hidden | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- return (collections.Complement $hidden $pages) -}}

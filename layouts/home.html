@@ -1,5 +1,6 @@
 {{ define "main" }}
   {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ $pages = partial "func/home-visible-posts.html" $pages }}
 
   {{ if eq site.Params.pinFeatured true }}
     {{ $limit := site.Params.numberOfPinnedPosts | default 8 }}
