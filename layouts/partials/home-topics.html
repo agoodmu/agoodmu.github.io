@@ -26,14 +26,13 @@
 {{- end -}}
 
 {{- with $cards -}}
-<section class="ctopics" aria-labelledby="ctopics-title">
+<section class="ctopics" aria-label="Topics">
   <header class="ctopics-heading">
-    <h2 id="ctopics-title">Topics</h2>
     <a href="{{ $overview.RelPermalink }}">All topics</a>
   </header>
 
   <div class="ctopics-grid">
-    {{- range first 4 (sort . "updated" "desc") -}}
+    {{- range first 2 (sort . "updated" "desc") -}}
       {{- $topic := .page -}}
       {{- $title := $topic.Params.displayTitle | default $topic.Title -}}
     <article class="ctopics-card">

@@ -4,8 +4,8 @@
   weight = -110
 
 [[main]]
-  name = "Series"
-  url = "series/"
+  name = "Topics"
+  url = "topics/"
   weight = -109
 
 [[main]]
