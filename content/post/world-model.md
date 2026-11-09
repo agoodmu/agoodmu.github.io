@@ -3,7 +3,7 @@ title: "World Model" # Title of the blog post.
 date: 2026-11-09T22:52:09+08:00 # Date of post creation.
 description: "Article description." # Description used for search engine.
 featured: true # Sets if post is a featured post, making appear on the home page side bar.
-draft: true # Sets whether to render this page. Draft of true will not be rendered.
+draft: false # Sets whether to render this page. Draft of true will not be rendered.
 toc: false # Controls if a table of contents should be generated for first-level links automatically.
 # menu: main
 usePageBundles: false # Set to true to group assets like images in the same folder as this post.
@@ -16,10 +16,9 @@ codeMaxLines: 10 # Override global value for how many lines within a code block 
 codeLineNumbers: false # Override global value for showing of line numbers within code block.
 figurePositionShow: true # Override global value for showing the figure label.
 categories:
-  - Technology
+  - AI
 tags:
-  - Tag_name1
-  - Tag_name2
+  - World Model
 series:
   - ai
 # comment: false # Disable comment if false.
