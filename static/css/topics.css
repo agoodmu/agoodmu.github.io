@@ -85,10 +85,7 @@
 }
 
 .ctopics-updated {
-  margin: 0.35rem 0 0;
-  color: var(--text);
-  font-size: 0.875rem;
-  line-height: 1.5;
+  white-space: nowrap;
 }
 
 .ctopics a:hover {
