@@ -1,5 +1,6 @@
 # enable search
 enableSearch = true
+defaultContentLanguage = "en"
 
 showHomeTopics = true
 customCSS = ["css/topics.css"]
